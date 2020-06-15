@@ -50,10 +50,10 @@ margin-top: 5px;
 margin-bottom: 10px;
 `;
 export const LinkText = styled.Text`
-color: #FFF
+color: #FFF;
+padding: 10px;
 `;
 
 
- 
- 
- 
+
+
