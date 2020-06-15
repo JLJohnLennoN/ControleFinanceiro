@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Platform } from 'react-native';
 import {
     Background, Container, Logo, AreaInput, Input, SubmitButton, SubmitText, Link, LinkText
 } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { AuthContext } from '../../contexts/auth';
 
 export default function SignIn() {
     const navigation = useNavigation();
@@ -11,11 +12,17 @@ export default function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const { user } = useContext(AuthContext);
+
+    function acesso() {
+        console.log(user.nome);
+    }
+
     return (
         <Background>
-            <Container 
-            behavior={Platform.OS === 'ios' ? 'padding' : ''} 
-            enabled>
+            <Container
+                behavior={Platform.OS === 'ios' ? 'padding' : ''}
+                enabled>
                 <Logo source={require('../../assets/Logo.png')} />
 
                 <AreaInput>
@@ -36,7 +43,7 @@ export default function SignIn() {
                         onChangeText={(text) => setPassword = (text)} />
                 </AreaInput>
 
-                <SubmitButton>
+                <SubmitButton onPress={acesso}>
                     <SubmitText>Acessar</SubmitText>
                 </SubmitButton>
 
