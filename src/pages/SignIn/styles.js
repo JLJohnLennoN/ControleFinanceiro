@@ -28,7 +28,8 @@ width: 90%;
 font-size: 17px;
 margin-bottom: 15px;
 padding: 10px;
-border-radius: 10px
+border-radius: 10px;
+color: #FFF
 `;
 
 export const SubmitButton = styled.TouchableOpacity`

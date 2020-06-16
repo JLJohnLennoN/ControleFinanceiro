@@ -25,9 +25,7 @@ function AuthRoutes() {
                     },
                     headerTintColor: '#FFF',
                     headerBackTitleVisible: false,
-                    headerTitle: 'Voltar'
-
-                }} />
+                    headerTitle: 'Voltar' }} />
         </AuthStack.Navigator>
     );
 }
