@@ -8,7 +8,7 @@ import {
 } from '../SignIn/styles';
 
 
-export default function SignIn() {
+export default function SignUp() {
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -33,7 +33,7 @@ export default function SignIn() {
                         autoCorrect={false}
                         // autoCapitalize='none'
                         value={nome}
-                        onChangeText={ (text) => setNome (text) } />
+                        onChangeText={(text) => setNome(text)} />
                 </AreaInput>
 
                 <AreaInput>
@@ -42,7 +42,7 @@ export default function SignIn() {
                         autoCorrect={false}
                         autoCapitalize='none'
                         value={email}
-                        onChangeText={(text) => setEmail (text)} />
+                        onChangeText={(text) => setEmail(text)} />
                 </AreaInput>
 
                 <AreaInput>
@@ -51,14 +51,12 @@ export default function SignIn() {
                         autoCorrect={false}
                         autoCapitalize='none'
                         value={password}
-                        onChangeText={(text) => setPassword (text)} />
+                        onChangeText={(text) => setPassword(text)} />
                 </AreaInput>
 
                 <SubmitButton onPress={handleSignUp}>
                     <SubmitText>Cadastrar</SubmitText>
                 </SubmitButton>
-
-
 
             </Container>
         </Background>

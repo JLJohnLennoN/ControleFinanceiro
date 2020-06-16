@@ -11,7 +11,8 @@ function AppRoutes() {
             <AppStack.Screen
                 name='Home'
                 component={Home}
-                options={{ headerShown: false }} />
+                // options={{ headerShown: false }} 
+                />
         </AppStack.Navigator>
     );
 }
