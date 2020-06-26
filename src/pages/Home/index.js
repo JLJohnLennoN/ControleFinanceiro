@@ -12,10 +12,13 @@ export default function Home() {
     const { user } = useContext(AuthContext);
 
     const [historico, setHistorico] = useState([
-        { key: '1', tipo: 'receita', valor: 9000.000 },
-        { key: '2', tipo: 'receita', valor: 2500.000 },
-        { key: '3', tipo: 'despesa', valor: 12000 },
-        { key: '4', tipo: 'receita', valor: 200.000 },
+        { key: '1', tipo: 'receita', valor: 90000 },
+        { key: '2', tipo: 'receita', valor: 250000 },
+        { key: '3', tipo: 'despesa', valor: 1200 },
+        { key: '4', tipo: 'receita', valor: 200000 },
+        { key: '5', tipo: 'despesa', valor: 5000 },
+        { key: '6', tipo: 'receita', valor: 15000 },
+        { key: '7', tipo: 'despesa', valor: 100 },
     ]);
 
     return (
@@ -28,10 +31,10 @@ export default function Home() {
             <Title>Ultimas movimentações</Title>
 
             <List
-                showVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 data={historico}
                 KeyExtrator={item => item.key}
-                renderItem={({ item }) => (<HistoricoList />)} />
+                renderItem={({ item }) => (<HistoricoList data={item}/>)} />
         </Background>
     );
 }
